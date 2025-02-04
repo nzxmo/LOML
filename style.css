@@ -24,24 +24,23 @@ html, body {
     padding: 20px;
 }
 
-/* Flower Design */
+/* Flowers Section */
 .flowers {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     margin: 20px 0;
 }
 
+/* Flower Design */
 .flower {
     position: relative;
     width: 50px;
     height: 80px;
     display: inline-block;
-    animation: fadeIn 2s ease-in-out;
 }
 
 /* Petals */
-.flower::before, .flower::after {
-    content: "";
+.petal {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -50,22 +49,36 @@ html, body {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Left & Right Petals */
-.flower::before { top: 0; left: 5px; }
-.flower::after { top: 10px; left: 15px; }
+/* Petals Arrangement */
+.petal:nth-child(1) { top: 0; left: 10px; }
+.petal:nth-child(2) { top: 10px; left: 0; }
+.petal:nth-child(3) { top: 10px; left: 20px; }
+.petal:nth-child(4) { top: 20px; left: 10px; }
 
 /* Stem */
-.flower::after {
+.stem {
+    position: absolute;
+    top: 40px;
+    left: 20px;
     width: 10px;
     height: 40px;
     background-color: green;
-    border-radius: 0;
-    top: 40px;
-    left: 20px;
 }
 
+/* Leaves */
+.leaf {
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.leaf.left { top: 50px; left: 0; transform: rotate(-30deg); }
+.leaf.right { top: 50px; left: 30px; transform: rotate(30deg); }
+
 /* Hover Effect */
-.flower:hover::before, .flower:hover::after {
+.flower:hover .petal {
     transform: scale(1.2);
 }
 
