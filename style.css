@@ -36,31 +36,42 @@ html, body {
 .flower {
     position: relative;
     width: 50px;
-    height: 100px;
+    height: 120px;
     display: inline-block;
 }
 
 /* Petals */
 .petal {
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     background-color: red;
     border-radius: 50%;
 }
 
 /* Petal Positions */
-.petal.top { top: -10px; left: 10px; }
-.petal.left { top: 5px; left: -5px; }
-.petal.right { top: 5px; left: 25px; }
+.petal.top { top: -15px; left: 7px; }
+.petal.left { top: -5px; left: -8px; }
+.petal.right { top: -5px; left: 22px; }
+
+/* Flower Bud */
+.bud {
+    position: absolute;
+    top: -5px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    background-color: darkred;
+    border-radius: 50%;
+}
 
 /* Stem */
 .stem {
     position: absolute;
-    top: 40px;
+    top: 25px;
     left: 20px;
     width: 10px;
-    height: 60px;
+    height: 80px;
     background-color: green;
 }
 
@@ -73,29 +84,12 @@ html, body {
     border-radius: 50%;
 }
 
-.left-leaf { top: 50px; left: 0; transform: rotate(-30deg); }
-.right-leaf { top: 50px; left: 30px; transform: rotate(30deg); }
+.left-leaf { top: 40px; left: -10px; transform: rotate(-30deg); }
+.right-leaf { top: 40px; left: 30px; transform: rotate(30deg); }
 
 /* Hover Effect */
 .flower:hover .petal {
     transform: scale(1.2);
-}
-
-/* Button */
-button {
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 15px;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: #cc0000;
 }
 
 /* Message */
@@ -103,12 +97,9 @@ button:hover {
     margin-top: 10px;
     font-size: 18px;
     color: #cc0000;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.hidden {
-    display: none;
+    opacity: 1;
+    display: block;
+    animation: fadeIn 2s ease-in-out;
 }
 
 /* Animations */
