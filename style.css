@@ -50,9 +50,9 @@ html, body {
 }
 
 /* Petal Positions */
-.petal.top { top: 0; left: 10px; }
-.petal.left { top: 10px; left: -5px; }
-.petal.right { top: 10px; left: 25px; }
+.petal.top { top: -10px; left: 10px; }
+.petal.left { top: 5px; left: -5px; }
+.petal.right { top: 5px; left: 25px; }
 
 /* Stem */
 .stem {
